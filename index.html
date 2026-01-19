@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Mirant Properties LLC — Hosting Services for short-term rental owners. Get your short-term rental from Great to Superhost." />
   <title>Mirant Properties LLC | Hosting Services</title>
-  <link rel="icon" href="assets/mirant-emblem.png" />
+
+  <!-- Favicons (ROOT) -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -31,7 +35,7 @@
 
       <div class="header-cta">
         <a class="btn btn-small btn-outline" href="tel:+15038699225">Call/Text</a>
-        <a class="btn btn-small" href="#contact">Free STR Audit</a>
+        <a class="btn btn-small" href="#contact">Get My Free Audit</a>
       </div>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -53,7 +57,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="#contact">Book a Free STR Audit</a>
+            <a class="btn" href="#contact">Get My Free Audit</a>
             <a class="btn btn-outline" href="tel:+15038699225">Call/Text: +1 (503) 869-9225</a>
           </div>
 
@@ -83,7 +87,7 @@
             <li>Turnover quality + standards</li>
             <li>Review strategy + issue recovery</li>
           </ul>
-          <a class="btn btn-block" href="#contact">Request your free audit</a>
+          <a class="btn btn-block" href="#contact">Get My Free Audit</a>
           <p class="tiny">No pressure. Just clear next steps.</p>
         </div>
       </div>
@@ -177,7 +181,7 @@
             <h3>Want a quick diagnosis?</h3>
             <p class="muted">Send your listing link and we’ll reply with the top opportunities.</p>
           </div>
-          <a class="btn" href="#contact">Get the free audit</a>
+          <a class="btn" href="#contact">Get My Free Audit</a>
         </div>
       </div>
     </section>
@@ -187,7 +191,7 @@
       <div class="container contact-grid">
         <div>
           <h2>Contact</h2>
-          <p class="muted">Book a free audit or ask a question — we respond quickly.</p>
+          <p class="muted">Get a free audit or ask a question — we respond quickly.</p>
 
           <div class="contact-cards">
             <div class="contact-card">
@@ -278,18 +282,11 @@
       const data = new FormData(form);
       const subject = encodeURIComponent('Free STR Audit Request — Mirant Properties');
       const body = encodeURIComponent(
-        `Name: ${data.get('name')}
-` +
-        `Phone: ${data.get('phone') || ''}
-` +
-        `Listing link: ${data.get('listing')}
-` +
-        `Goal: ${data.get('goal')}
-
-` +
-        `Message:
-${data.get('message') || ''}
-`
+        `Name: ${data.get('name')}\n` +
+        `Phone: ${data.get('phone') || ''}\n` +
+        `Listing link: ${data.get('listing')}\n` +
+        `Goal: ${data.get('goal')}\n\n` +
+        `Message:\n${data.get('message') || ''}\n`
       );
       window.location.href = `mailto:Urenda86@gmail.com?subject=${subject}&body=${body}`;
     });
