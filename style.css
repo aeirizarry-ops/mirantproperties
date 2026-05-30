@@ -423,6 +423,51 @@ h3 {
   box-shadow: 0 5px 14px rgba(20, 34, 29, 0.08);
 }
 
+.external-listings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: -8px 0 22px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.external-listings p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.external-listings div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listing-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 96px;
+  padding: 0 14px;
+  color: var(--navy);
+  background: #f1f6f3;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-weight: 850;
+}
+
+.listing-button:hover {
+  color: var(--green);
+  background: #e8f0eb;
+  text-decoration: none;
+}
+
 .property-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -823,6 +868,16 @@ textarea:focus {
 
   .filter {
     padding: 0 8px;
+  }
+
+  .external-listings {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .external-listings div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .property-grid,
