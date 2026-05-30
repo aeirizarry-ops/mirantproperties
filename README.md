@@ -1,15 +1,17 @@
-# Files
-- index.html
-- style.css
-- /assets (logo images)
+# Mirant Properties LLC Customer Website
 
-## Deploy on GitHub Pages (quick steps)
-1. Create a new GitHub repo (public is easiest).
-2. Upload these files to the repo root (index.html and style.css at top level).
-3. Go to: Settings → Pages
-4. Source: Deploy from a branch → Branch: main → /root → Save
-5. Your site will appear at: https://YOUR-USERNAME.github.io/REPO-NAME/
+Static customer-facing website for Mirant Properties LLC.
 
-## Notes
-- The contact form opens a pre-filled email (mailto). For a true form submission,
-  you can later add Formspree, Netlify Forms, or a small backend.
+## Files
+- `index.html` - main website content and lightweight form behavior
+- `style.css` - responsive page styling
+- `assets/` - logo and property images
+
+## GitHub Pages
+1. Go to repository Settings.
+2. Open Pages.
+3. Set Source to `Deploy from a branch`.
+4. Set Branch to `main` and folder to `/root`.
+5. Save.
+
+The contact form uses `mailto:` so it works on static hosting. A backend form service can be added later if direct submissions are needed.
