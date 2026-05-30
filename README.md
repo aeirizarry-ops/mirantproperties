@@ -1,9 +1,9 @@
-# Mirant Properties LLC Customer Website
+# Mirant Properties LLC Airbnb Hosting Website
 
-Static customer-facing website for Mirant Properties LLC.
+Static website for Mirant Properties LLC short-term rental and Airbnb hosting services.
 
 ## Files
-- `index.html` - main website content and lightweight form behavior
+- `index.html` - main website content and lightweight email form behavior
 - `style.css` - responsive page styling
 - `assets/` - logo and property images
 
