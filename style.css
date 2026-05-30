@@ -230,36 +230,14 @@ textarea {
 }
 
 .hero {
-  position: relative;
-  display: grid;
-  align-items: center;
-  min-height: clamp(520px, 72svh, 720px);
+  background: var(--surface);
   overflow: hidden;
 }
 
-.hero-media,
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-media {
-  background-image: url("assets/hero-property.png");
-  background-position: center;
-  background-size: cover;
-  transform: scale(1.01);
-}
-
-.hero-overlay {
-  background:
-    linear-gradient(90deg, rgba(9, 25, 20, 0.78), rgba(9, 25, 20, 0.42) 48%, rgba(9, 25, 20, 0.08)),
-    linear-gradient(0deg, rgba(9, 25, 20, 0.26), rgba(9, 25, 20, 0));
-}
-
-.hero-content {
-  position: relative;
-  padding: 70px 0;
-  color: #fff;
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .eyebrow {
@@ -269,10 +247,6 @@ textarea {
   font-weight: 850;
   letter-spacing: 0;
   text-transform: uppercase;
-}
-
-.hero .eyebrow {
-  color: var(--gold);
 }
 
 h1,
@@ -308,27 +282,13 @@ h3 {
   font-size: 1.22rem;
 }
 
-.lead {
-  max-width: 58ch;
-  margin: 22px 0 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 32px;
-}
-
 .quick-actions {
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: min(1120px, calc(100% - 40px));
-  margin: -32px auto 0;
+  margin: 0 auto;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -875,10 +835,6 @@ textarea:focus {
     right: 16px;
   }
 
-  .hero {
-    min-height: 520px;
-  }
-
   h1 {
     font-size: clamp(3rem, 15vw, 4.5rem);
   }
@@ -887,13 +843,11 @@ textarea:focus {
     max-width: 100%;
   }
 
-  .hero-actions,
   .section-heading {
     align-items: stretch;
     flex-direction: column;
   }
 
-  .hero-actions .btn,
   .form .btn {
     width: 100%;
   }
