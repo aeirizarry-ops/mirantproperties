@@ -241,34 +241,31 @@ textarea {
 
 .hero {
   position: relative;
-  display: grid;
-  min-height: clamp(620px, 82vh, 780px);
   overflow: hidden;
-  color: #fff;
-  background: #0d241f;
+  color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, var(--mist) 100%);
 }
 
-.hero-media {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(8, 24, 28, 0.88) 0%, rgba(8, 24, 28, 0.64) 42%, rgba(8, 24, 28, 0.22) 100%),
-    linear-gradient(0deg, rgba(8, 24, 28, 0.58), rgba(8, 24, 28, 0.08) 52%),
-    url("assets/mirant-hosting-banner.jpg") center / cover;
+.hero-banner {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-banner img {
+  width: min(100%, 1280px);
+  height: auto;
+  margin: 0 auto;
 }
 
 .hero-inner {
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  min-height: inherit;
-  padding: 96px 0;
+  padding: clamp(42px, 6vw, 76px) 0 clamp(78px, 7vw, 104px);
 }
 
 .hero-copy {
   width: 100%;
-  max-width: 760px;
+  max-width: 940px;
   min-width: 0;
 }
 
@@ -283,7 +280,7 @@ textarea {
 
 .hero .eyebrow,
 .market-section .eyebrow {
-  color: #ffd27b;
+  color: #2f784c;
 }
 
 h1,
@@ -302,8 +299,9 @@ h3 {
 }
 
 h1 {
-  max-width: 11.5ch;
-  font-size: clamp(3.3rem, 7vw, 6.4rem);
+  max-width: 13ch;
+  color: var(--navy);
+  font-size: clamp(2.9rem, 6vw, 5.8rem);
   font-weight: 900;
 }
 
@@ -323,7 +321,7 @@ h3 {
   width: 100%;
   max-width: 690px;
   margin: 22px 0 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--muted);
   font-size: clamp(1.08rem, 2vw, 1.35rem);
 }
 
@@ -347,13 +345,20 @@ h3 {
   max-width: 100%;
   min-height: 34px;
   padding: 0 11px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.13);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--navy);
+  background: #ffffff;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   font-size: 0.84rem;
   font-weight: 760;
   white-space: normal;
+}
+
+.hero .btn-light {
+  color: var(--navy);
+  background: #ffffff;
+  border-color: rgba(7, 50, 92, 0.22);
+  box-shadow: 0 12px 28px rgba(7, 50, 92, 0.08);
 }
 
 .quick-actions {
@@ -678,7 +683,7 @@ h3 {
   min-height: 460px;
   background:
     linear-gradient(0deg, rgba(7, 50, 92, 0.1), rgba(7, 50, 92, 0.1)),
-    url("assets/mirant-hosting-banner.jpg") center / cover;
+    url("assets/hero-property.png") center / cover;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -922,19 +927,8 @@ textarea:focus {
     right: 16px;
   }
 
-  .hero {
-    min-height: 640px;
-  }
-
   .hero-inner {
-    align-items: end;
-    padding: 96px 0 72px;
-  }
-
-  .hero-media {
-    background:
-      linear-gradient(0deg, rgba(8, 24, 28, 0.94), rgba(8, 24, 28, 0.62) 72%),
-      url("assets/mirant-hosting-banner.jpg") center / cover;
+    padding: 34px 0 58px;
   }
 
   h1 {
