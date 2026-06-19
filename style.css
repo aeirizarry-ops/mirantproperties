@@ -741,6 +741,10 @@ h3 {
   padding: 13px;
 }
 
+.contact-app-link {
+  margin-top: 18px;
+}
+
 .contact-label {
   margin-bottom: 4px;
   color: var(--muted);
